@@ -25,3 +25,13 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+Atividade para solution sprint da fase 4 - Microserviços MBA FULL STACK DEVELOPMENT - DESIGN, ENGINEERING & DEPLOYMENT
+
+Etapa 1 - Front end AngularJS Source code: https://github.com/Alexandre076/cnhDigitalAngular.git
+
+Etapa 2 Backend: Spring + Mysql Source code: https://github.com/Alexandre076/carteira-digital.git
+
+Etapa 3 Project URL: https://front-at-lexat-ndreredhat-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/login
+
+Etapa 4 Source code:
