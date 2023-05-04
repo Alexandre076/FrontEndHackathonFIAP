@@ -30,6 +30,3 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 Atividade para o Hackathon MBA FIAP
 
 Inclui o Frontend da aplicação de gestão de reclamações unificada utilizando como framework AngularJS.
-=======
-Front End em AngularJS para o hackathon MBA FIAP  
->>>>>>> d2a8ab3ab15955ddc095fe94efe4056b039e2f2c
