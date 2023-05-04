@@ -1,0 +1,40 @@
+<h2>Dashboard de Incidentes</h2>
+<p></p>
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <div>
+        <table class="table table-striped table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nome</th>
+                <th scope="col">E-mail</th>
+                <th scope="col">Assunto</th>
+                <th scope="col">Descrição</th>
+                <th scope="col">Data</th>
+                <th scope="col">Pedido</th>
+                <th scope="col">Reclamação</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of Users">
+                    <td>{{ user.Id }}</td>
+                    <td>{{ user.Nome }}</td>
+                    <td>{{ user.Email }}</td>
+                    <td>{{ user.Assunto }}</td>
+                    <td>{{ user.Descricao }}</td>
+                    <td>{{ user.Data }}</td>
+                    <td>{{ user.Pedido }}</td>
+                    <td>{{ user.Reclamacao }}</td>
+                    <td>{{ user.Status }}</td>
+                  </tr>
+            </tbody>
+          </table>
+    </div>
+    <div class="form-group">
+        <button [disabled]="loading" class="btn btn-primary btn-md" (click)="navigateToLogin()">
+            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+            Voltar
+        </button>
+    </div>
+</form>

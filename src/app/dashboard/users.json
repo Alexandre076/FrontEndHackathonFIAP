@@ -1,0 +1,68 @@
+[
+    {
+      "Id": 1,
+      "Nome": "Alexandre",
+      "Email": "Alex@gmail.com",
+      "Assunto": "Envio-Entrega",
+      "Descricao": "Pedido não foi entregue",
+      "Data": " 02/05/2023",
+      "Pedido": 1,
+      "Reclamacao": 1,
+      "Status": "Logística"
+    },
+    {
+      "Id": 2,
+      "Nome": "Carla",
+      "Email": "Carla@yahoo.com",
+      "Assunto": "Pagamento",
+      "Descricao": "Pagamento não confirmado pelo banco",
+      "Data": " 02/05/2023",
+      "Pedido": 2,
+      "Reclamacao": 2,
+      "Status": " Aguardando pagamento"
+    },
+    {
+      "Id": 3,
+      "Nome": "Rafael",
+      "Email": "Rafael.R@outlook.com",
+      "Assunto": "Envio-Entrega",
+      "Descricao": "Meu pedido não foi enviado",
+      "Data": " 21/04/2023",
+      "Pedido": 3,
+      "Reclamacao": 3,
+      "Status": " Logística"
+    },
+    {
+      "Id": 4,
+      "Nome": "Alice",
+      "Email": "Alice.M@gmail.com",
+      "Assunto": "Compra Protegida",
+      "Descricao": "Celular entregue com avarias",
+      "Data": " 01/04/2023",
+      "Pedido": 4,
+      "Reclamacao": 4,
+      "Status": " Entregue"
+    },
+    {
+      "Id": 5,
+      "Nome": "Guilherme",
+      "Email": "Guilherme.M@xyz.com",
+      "Assunto": "Meu pagamento foi recusado",
+      "Descricao": "Cartão recusado",
+      "Data": " 01/04/2023",
+      "Pedido": 5,
+      "Reclamacao": 5,
+      "Status": "Pendente pagamento"
+    },
+    {
+      "Id": 6,
+      "Nome": "Lucas",
+      "Email": "Lucas.h@abc.com",
+      "Assunto": "Envio-Entrega",
+      "Descricao": "Pedido foi entregue com divergências",
+      "Data": " 01/04/2023",
+      "Pedido": 6,
+      "Reclamacao": 6,
+      "Status": " Entregue"
+    }
+   ]
