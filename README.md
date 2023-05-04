@@ -1,4 +1,4 @@
-# ProjetoAngularV1
+# Frontend AngularJS - Hackathon FIAP
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.6.
 
@@ -26,6 +26,10 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
+<<<<<<< HEAD
 Atividade para o Hackathon MBA FIAP
 
 Inclui o Frontend da aplicação de gestão de reclamações unificada utilizando como framework AngularJS.
+=======
+Front End em AngularJS para o hackathon MBA FIAP  
+>>>>>>> d2a8ab3ab15955ddc095fe94efe4056b039e2f2c
