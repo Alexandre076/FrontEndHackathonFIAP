@@ -4,9 +4,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
 import {HttpClient } from '@angular/common/http';
 import { AlertService, UserService, AuthenticationService } from 'src/app/_services';
-import UsersJson from './users.json';
+import ReclamacoesJson from '../reclamacoes.json';
 
-interface USERS {
+interface RECLAMACAOES {
       Id: Number,
       Nome: String,
       Email: String,
@@ -16,7 +16,6 @@ interface USERS {
       Pedido: Number,
       Reclamacao: Number,
       Status: String
-
 }
 
 @Component({ templateUrl: 'dashboard.component.html' })
@@ -25,7 +24,7 @@ export class DashboardComponent implements OnInit {
     registerForm: FormGroup;
     loading = false;
     submitted = false;
-    Users: USERS[] = UsersJson;   
+    Users: RECLAMACAOES[] = ReclamacoesJson;   
 
     constructor(
         private formBuilder: FormBuilder,
@@ -34,9 +33,6 @@ export class DashboardComponent implements OnInit {
         private userService: UserService,
         private alertService: AlertService,
         private http: HttpClient
-        
-        
-        
     ) 
     {
        

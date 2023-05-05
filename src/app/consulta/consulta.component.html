@@ -1,24 +1,18 @@
 ﻿<h2>Consultar Reclamação</h2>
 <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
-        <label for="placa">Número da Reclamação</label>
-        <input type="text" formControlName="placa" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['placa'].errors }" />
-        <div *ngIf="submitted && f['placa'].errors" class="invalid-feedback">
-            <div *ngIf="f['placa'].errors['required']">Campo Placa é obrigatório</div>
+        <label for="reclamacao">Número da Reclamação</label>
+        <input type="text" formControlName="reclamacao" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['reclamacao'].errors }" />
+        <div *ngIf="submitted && f['reclamacao'].errors" class="invalid-feedback">
+            <div *ngIf="f['reclamacao'].errors['required']">Campo número da reclamação é obrigatório!</div>
         </div>
     </div>
     <div class="row">
         <div class="col-xs-12 col-md-6 col-md-offset-3">
-            <p *ngIf="loadedInfracao.length < 1">Nenhum resultado encontrado</p>
-            <ul class="list-group" *ngIf="loadedInfracao.length >= 1">
-                <li class="list-group-item" *ngFor ="let item of loadedInfracao">
-                    <P>Id: {{ item.id}}</P>
-                    <p>Placa: {{item.placa}}</p>
-                    <P>Valor: {{ item.valor}}</P>
-                    <p>Observação: {{item.observacao}}</p>
-                    <P>Local: {{ item.local}}</P>
-                    <p>Veículo: {{item.veiculo}}</p>
-                    <p>Data: {{item.data}}</p>
+            <p *ngIf="loadedReclamacao.length < 1">Nenhum resultado encontrado</p>
+            <ul class="list-group" *ngIf="loadedReclamacao.length >= 1">
+                <li class="list-group-item" *ngFor ="let item of loadedReclamacao">
+                    <P>Id: {{ item.Id}}</P>
                 </li>
             </ul>
         </div>
