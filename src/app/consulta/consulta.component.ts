@@ -4,11 +4,11 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first, map } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
 import { AlertService, UserService, AuthenticationService } from 'src/app/_services';
-import { Infracao } from 'src/app/_models/infracao.model';
+import { Reclamacao } from 'src/app/_models/reclamacao.model';
 
 @Component({ templateUrl: 'consulta.component.html' })
 export class ConsultaComponent implements OnInit {
-    loadedInfracao: Infracao[] = [];
+    loadedReclamacao: Reclamacao[] = [];
     // @ts-ignore
     registerForm: FormGroup;
     loading = false;
@@ -33,26 +33,30 @@ export class ConsultaComponent implements OnInit {
         });
     }
 
-    private fetchInfracao() {
-        const placa = this.registerForm.controls['placa'].value;
-        console.log(placa);
+    private fetchReclamacao() {
+        const reclamacao = this.registerForm.controls['id'].value;
+        console.log(reclamacao);
 
+        //Note: Provisioned code to connect with backend API
+        //The endpoint will be updated when the development phase is finisedh
+        /*
         this.http
-        .get<{ [key: string]: Infracao}>('http://localhost:8081/api/infracoes/find?placa='+placa)
+        .get<{ [key: string]: Reclamacao}>('http://localhost:8080/api/reclamacoes/find?reclamacao='+reclamacao)
         .pipe(
             map(responseData => {
-            const infracaoArray: Infracao[] = [];
+            const reclamacaoArray: Reclamacao[] = [];
             for (const key in responseData){
                 if (responseData.hasOwnProperty(key)) {
-                infracaoArray.push({...responseData[key], id: key});
+                reclamacaoArray.push({...responseData[key], Id: key});
                 }
             }
-            return infracaoArray;        
+            return reclamacaoArray;        
         }))
-        .subscribe(infracao => {
-            this.loadedInfracao = infracao;
-            console.log(infracao);
+        .subscribe(reclamacao => {
+            this.loadedReclamacao = reclamacao;
+            console.log(reclamacao);
         });
+        */
     }
 
     // convenience getter for easy access to form fields
@@ -73,7 +77,7 @@ export class ConsultaComponent implements OnInit {
             return;
         }
 
-        this.fetchInfracao();
+        this.fetchReclamacao();
     
 
         this.loading = true;
