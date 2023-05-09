@@ -5,6 +5,19 @@ import { first, map } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
 import { AlertService, UserService, AuthenticationService } from 'src/app/_services';
 import { Reclamacao } from 'src/app/_models/reclamacao.model';
+import ReclamacoesJson from '../reclamacoes.json';
+
+interface RECLAMACAOES {
+    Id: Number,
+    Nome: String,
+    Email: String,
+    Assunto: String,
+    Descricao: String,
+    Data: String,
+    Pedido: Number,
+    Reclamacao: Number,
+    Status: String
+}
 
 @Component({ templateUrl: 'consulta.component.html' })
 export class ConsultaComponent implements OnInit {
@@ -13,7 +26,8 @@ export class ConsultaComponent implements OnInit {
     registerForm: FormGroup;
     loading = false;
     submitted = false;
-
+    Users: RECLAMACAOES[] = ReclamacoesJson;  
+    filter: RECLAMACAOES[] = [];
     constructor(
         private formBuilder: FormBuilder,
         private router: Router,
@@ -29,16 +43,16 @@ export class ConsultaComponent implements OnInit {
 
     ngOnInit() {
         this.registerForm = this.formBuilder.group({
-            placa: ['', Validators.required],
+            reclamacao: ['', Validators.required],
         });
     }
 
     private fetchReclamacao() {
-        const reclamacao = this.registerForm.controls['id'].value;
-        console.log(reclamacao);
+        const IdReclamacao = this.registerForm.controls['reclamacao'].value;
+        console.log(IdReclamacao);
 
         //Note: Provisioned code to connect with backend API
-        //The endpoint will be updated when the development phase is finisedh
+        //The endpoint will be updated when the development phase is finished
         /*
         this.http
         .get<{ [key: string]: Reclamacao}>('http://localhost:8080/api/reclamacoes/find?reclamacao='+reclamacao)
@@ -57,6 +71,12 @@ export class ConsultaComponent implements OnInit {
             console.log(reclamacao);
         });
         */
+        
+        //Filter Json output to show as a result in the form
+        this.filter = this.Users.filter(
+            (obj) => {return obj.Id == IdReclamacao }
+        )
+        console.log(this.filter);
     }
 
     // convenience getter for easy access to form fields
@@ -66,8 +86,6 @@ export class ConsultaComponent implements OnInit {
 
 
         this.submitted = true;
-
-        
 
         // reset alerts on submit
         this.alertService.clear();

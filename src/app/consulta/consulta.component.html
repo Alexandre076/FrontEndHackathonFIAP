@@ -9,14 +9,24 @@
     </div>
     <div class="row">
         <div class="col-xs-12 col-md-6 col-md-offset-3">
-            <p *ngIf="loadedReclamacao.length < 1">Nenhum resultado encontrado</p>
-            <ul class="list-group" *ngIf="loadedReclamacao.length >= 1">
-                <li class="list-group-item" *ngFor ="let item of loadedReclamacao">
+            <p *ngIf="filter.length < 1">Nenhum resultado encontrado</p>
+            <ul class="list-group" *ngIf="filter.length >= 1">
+                <li class="list-group-item" *ngFor ="let item of filter">
                     <P>Id: {{ item.Id}}</P>
+                    <P>Nome: {{ item.Nome}}</P>
+                    <P>E-mail: {{ item.Email}}</P>
+                    <P>Assunto: {{ item.Assunto}}</P>
+                    <P>Descrição: {{ item.Descricao}}</P>
+                    <P>Data: {{ item.Data}}</P>
+                    <P>Pedido: {{ item.Pedido}}</P>
+                    <P>Reclamacao: {{ item.Reclamacao}}</P>
+                    <P>Status: {{ item.Status}}</P>
+                    <p></p>
                 </li>
             </ul>
         </div>
     </div>
+    <p></p>
     <div class="form-group">
         <button [disabled]="loading" class="btn btn-primary">
             <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>

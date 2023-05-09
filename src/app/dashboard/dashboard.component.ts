@@ -43,15 +43,6 @@ export class DashboardComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.registerForm = this.formBuilder.group({
-            id: ['', Validators.required],
-            placa: ['', Validators.required],
-            valor: ['', Validators.required],
-            observacao: ['', Validators.required],
-            local: ['', Validators.required],
-            veiculo: ['', Validators.required],
-            data: ['', [Validators.required, ]]
-        });
         
     }
 
@@ -66,23 +57,9 @@ export class DashboardComponent implements OnInit {
         console.log(this.registerForm.controls['id'].value);
         //send http request
         
-        const postData = {
-            id: this.registerForm.controls['id'].value,
-            placa: this.registerForm.controls['placa'].value,
-            valor: this.registerForm.controls['valor'].value,
-            observacoes: this.registerForm.controls['observacao'].value,
-            local: this.registerForm.controls['local'].value,
-            veiculo: this.registerForm.controls['veiculo'].value,
-            data: this.registerForm.controls['data'].value,
-          };
         
-        //Cors example
-        const headers = { 'Content-Type': 'application/json','Access-Control-Allow-Origin': '*', }
-        this.http.post('http://localhost:8081/api/infracoes/',postData,{headers}).subscribe(responseData => {
-            console.log(responseData);
-            this.alertService.success('Cadastro realizado com sucesso', true);
-            this.router.navigate(['/cadastro']);
-        });
+        
+        
         // reset alerts on submit
         this.alertService.clear();
         
@@ -91,19 +68,6 @@ export class DashboardComponent implements OnInit {
         if (this.registerForm.invalid) {
             return;
         }
-
-        this.loading = true;
-        this.userService.register(this.registerForm.value)
-            .pipe(first())
-            .subscribe(
-                data => {
-                    this.alertService.success('Cadastro realizado com sucesso', true);
-                    this.router.navigate(['/cadastro']);
-                },
-                error => {
-                    this.alertService.error(error);
-                    this.loading = false;
-                });
     }
     navigateToLogin() {
         this.router.navigate(['/login']);
