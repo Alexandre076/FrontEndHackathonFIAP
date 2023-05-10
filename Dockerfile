@@ -18,5 +18,5 @@ EXPOSE 8080:8080
 CMD ["nginx", "-g", "daemon off;"]
 
 
-#docker build -t app-cnh-digital .
-#docker run -p 8080:80 app-cnh-digital
+#docker build -t app-hackathon-fiap .
+#docker run -p 8080:80 app-hackathon-fiap
