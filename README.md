@@ -26,7 +26,25 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
-<<<<<<< HEAD
-Atividade para o Hackathon MBA FIAP
+## Description
 
-Inclui o Frontend da aplicação de gestão de reclamações unificada utilizando como framework AngularJS.
+Task for Hackathon - FIAP MBA
+
+Includes the frontend for the application Gestão de Reclamaçoes Unificada based on AngularJS as development framework.
+
+## App Screenshots
+
+Login
+![](images/login.png)
+
+Main Menu
+![](images/MenuPrinciapal.png)
+
+Dashboard
+![](images/Dashboard.png)
+
+Open Request
+![](images/AbrirReclamacao.png)
+
+Check Request
+![](images/ConsultarReclamacao.png)
